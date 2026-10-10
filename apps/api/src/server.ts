@@ -13,6 +13,19 @@ import { CreateJobSchema, JOB_ID_PATTERN, JobStore } from "./store.js";
 
 export const WEB_ORIGIN = "http://localhost:3000";
 
+/**
+ * Origins allowed to call the API: the local web UI, plus any listed in DEMOFORGE_WEB_ORIGINS
+ * (comma-separated, e.g. a deployed frontend: "https://demoforge.vercel.app"). Read when the server is built,
+ * so a value from the repo's .env (loaded at startup) is seen.
+ */
+export function allowedOrigins(env: NodeJS.ProcessEnv = process.env): string[] {
+  const extra = (env.DEMOFORGE_WEB_ORIGINS ?? "")
+    .split(",")
+    .map((o) => o.trim().replace(/\/+$/, ""))
+    .filter(Boolean);
+  return [...new Set([WEB_ORIGIN, ...extra])];
+}
+
 export type BuildServerOptions = {
   store?: JobStore;
   /** Receives each new job id; runs the pipeline. Omit to only record jobs. */
@@ -49,7 +62,7 @@ export async function buildServer(opts: BuildServerOptions = {}): Promise<Fastif
 
   await app.register(cors, {
     // An array makes the plugin check the request origin; a plain string is echoed to every origin.
-    origin: [WEB_ORIGIN],
+    origin: allowedOrigins(),
     methods: ["GET", "HEAD", "POST", "OPTIONS"],
     exposedHeaders: ["Content-Range", "Accept-Ranges", "Content-Length"],
   });
