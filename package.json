@@ -1,0 +1,35 @@
+{
+  "name": "demoforge",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Turn a web project plus plain-English instructions into a recorded demo video.",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "samples/*"
+  ],
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run --passWithNoTests",
+    "demo:runner": "npm run demo:runner -w @demoforge/runner --",
+    "demo:repair": "npm run demo:repair -w @demoforge/repair",
+    "demo:launcher": "npm run demo:launcher -w @demoforge/launcher --",
+    "setup:check": "tsx scripts/check-setup.ts",
+    "setup": "tsx scripts/setup.ts",
+    "make:fallbacks": "tsx scripts/make-fallbacks.ts",
+    "eval": "npm --prefix eval run eval --",
+    "dev": "npm run dev -w @demoforge/api",
+    "demo:api": "npm run demo:api -w @demoforge/api",
+    "demo:web": "node apps/web/scripts/demo-web.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0",
+    "zod": "^3.23.0"
+  }
+}

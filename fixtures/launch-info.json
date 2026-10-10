@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://localhost:3100",
+  "projectDir": "/tmp/demoforge/taskly",
+  "framework": "next",
+  "packageManager": "npm",
+  "startCommand": "npm run dev -- -p 3100",
+  "port": 3100,
+  "envVarsRequired": []
+}

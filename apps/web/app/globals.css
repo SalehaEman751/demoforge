@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* System fonts only (Tailwind's default stack); no web fonts and no images are loaded. */
+html {
+  font-size: 100%;
+}
+/* Bigger type on wide screens and projectors; every rem-based size scales with it. */
+@media (min-width: 1024px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid theme("colors.accent.600");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin {
+    animation-duration: 2.4s;
+  }
+}

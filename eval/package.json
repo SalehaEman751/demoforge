@@ -1,0 +1,14 @@
+{
+  "name": "@demoforge/eval",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "eval": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@demoforge/shared": "*",
+    "zod": "^3.23.0"
+  }
+}

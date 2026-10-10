@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.next/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.demoforge/
+recordings/
+*.tsbuildinfo
+out/
+.data/
+.cache/
+test-results/

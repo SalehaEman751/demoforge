@@ -1,0 +1,16 @@
+{
+  "name": "@demoforge/runner",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "demo:runner": "tsx src/demo.ts"
+  },
+  "dependencies": {
+    "@demoforge/shared": "*",
+    "zod": "^3.23.0",
+    "playwright-core": "~1.56.1"
+  }
+}

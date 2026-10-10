@@ -1,0 +1,8 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    // The runner package's in-page code uses DOM types and is type-checked through its import.
+    "lib": ["ES2022", "DOM"]
+  },
+  "include": ["src"]
+}

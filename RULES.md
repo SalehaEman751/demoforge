@@ -1,0 +1,9 @@
+- Read RULES.md and CONTRACTS.md before writing code.
+- Only create or edit files inside the folder your epic owns, plus tests for it.
+- Never edit packages/shared or fixtures/. If a contract looks wrong, append the problem to NOTES/contract-issues.md and carry on with the current contract.
+- Import only from packages/shared and your own folder. Never import another epic's package.
+- Use fixtures/ for sample data. Ship src/mock.ts returning fixture data through the same function signature as the real module.
+- Ship `npm run demo:<name>` that proves your module works alone.
+- TypeScript strict, Zod for any external input, no new heavy dependencies without need.
+- This is a 30-hour hackathon MVP: choose the smallest working solution, no extra features.
+- Finish by running typecheck and your tests, then report what you built, how to run it, and known limits.

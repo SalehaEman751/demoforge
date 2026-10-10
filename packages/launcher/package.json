@@ -1,0 +1,15 @@
+{
+  "name": "@demoforge/launcher",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "demo:launcher": "tsx src/demo.ts"
+  },
+  "dependencies": {
+    "@demoforge/shared": "*",
+    "zod": "^3.23.0"
+  }
+}

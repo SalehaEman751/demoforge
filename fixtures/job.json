@@ -1,0 +1,235 @@
+{
+  "id": "job_demo01",
+  "status": "done",
+  "projectSource": "./samples/taskly",
+  "instructions": "Show a new user signing up and adding their first task.",
+  "info": {
+    "baseUrl": "http://localhost:3100",
+    "projectDir": "/tmp/demoforge/taskly",
+    "framework": "next",
+    "packageManager": "npm",
+    "startCommand": "npm run dev -- -p 3100",
+    "port": 3100,
+    "envVarsRequired": []
+  },
+  "brief": {
+    "name": "Taskly",
+    "framework": "Next.js",
+    "routes": [
+      "/",
+      "/signup",
+      "/dashboard"
+    ],
+    "readmeSummary": "Taskly is a minimal task manager. Visitors land on a marketing page, create an account on /signup, and then add and view tasks on /dashboard.",
+    "startCommand": "npm run dev -- -p 3100",
+    "port": 3100
+  },
+  "inventory": {
+    "pages": [
+      {
+        "url": "/",
+        "title": "Taskly - Get things done",
+        "elements": [
+          {
+            "role": "heading",
+            "name": "Taskly"
+          },
+          {
+            "role": "heading",
+            "name": "Simple tasks for busy people"
+          },
+          {
+            "role": "link",
+            "name": "Get started"
+          },
+          {
+            "role": "link",
+            "name": "Sign up"
+          }
+        ]
+      },
+      {
+        "url": "/signup",
+        "title": "Create your account - Taskly",
+        "elements": [
+          {
+            "role": "heading",
+            "name": "Create your account"
+          },
+          {
+            "role": "textbox",
+            "name": "Email",
+            "placeholder": "you@example.com"
+          },
+          {
+            "role": "textbox",
+            "name": "Password",
+            "placeholder": "At least 8 characters"
+          },
+          {
+            "role": "button",
+            "name": "Create account"
+          }
+        ]
+      },
+      {
+        "url": "/dashboard",
+        "title": "Dashboard - Taskly",
+        "elements": [
+          {
+            "role": "heading",
+            "name": "Your tasks"
+          },
+          {
+            "role": "textbox",
+            "name": "New task",
+            "placeholder": "What needs doing?"
+          },
+          {
+            "role": "button",
+            "name": "Add task"
+          }
+        ]
+      }
+    ]
+  },
+  "plan": {
+    "title": "Taskly: sign up and add your first task",
+    "steps": [
+      {
+        "id": 1,
+        "action": "navigate",
+        "url": "/signup",
+        "caption": "Open the Taskly sign-up page"
+      },
+      {
+        "id": 2,
+        "action": "fill",
+        "target": {
+          "role": "textbox",
+          "name": "Email"
+        },
+        "value": "demo@taskly.dev",
+        "caption": "Enter an email address"
+      },
+      {
+        "id": 3,
+        "action": "fill",
+        "target": {
+          "role": "textbox",
+          "name": "Password"
+        },
+        "value": "demo-password-123",
+        "caption": "Choose a password"
+      },
+      {
+        "id": 4,
+        "action": "click",
+        "target": {
+          "role": "button",
+          "name": "Create account"
+        },
+        "caption": "Create the account"
+      },
+      {
+        "id": 5,
+        "action": "assert_text",
+        "text": "Your tasks",
+        "caption": "We land on the dashboard"
+      },
+      {
+        "id": 6,
+        "action": "fill",
+        "target": {
+          "role": "textbox",
+          "name": "New task"
+        },
+        "value": "Record the demo video",
+        "caption": "Type a new task"
+      },
+      {
+        "id": 7,
+        "action": "click",
+        "target": {
+          "role": "button",
+          "name": "Add task"
+        },
+        "caption": "Add the task to the list"
+      },
+      {
+        "id": 8,
+        "action": "assert_text",
+        "text": "Record the demo video",
+        "caption": "The new task appears in the list"
+      }
+    ]
+  },
+  "run": {
+    "videoPath": "out/job_demo01/demo.webm",
+    "logPath": "out/job_demo01/run.log",
+    "results": [
+      {
+        "stepId": 1,
+        "status": "ok",
+        "durationMs": 1800,
+        "repairAttempts": 0
+      },
+      {
+        "stepId": 2,
+        "status": "ok",
+        "durationMs": 900,
+        "repairAttempts": 0
+      },
+      {
+        "stepId": 3,
+        "status": "ok",
+        "durationMs": 850,
+        "repairAttempts": 0
+      },
+      {
+        "stepId": 4,
+        "status": "repaired",
+        "error": "Timeout 5000ms waiting for role=button[name=\"Sign up\"]",
+        "durationMs": 6200,
+        "repairAttempts": 1
+      },
+      {
+        "stepId": 5,
+        "status": "ok",
+        "durationMs": 700,
+        "repairAttempts": 0
+      },
+      {
+        "stepId": 6,
+        "status": "ok",
+        "durationMs": 880,
+        "repairAttempts": 0
+      },
+      {
+        "stepId": 7,
+        "status": "ok",
+        "durationMs": 640,
+        "repairAttempts": 0
+      },
+      {
+        "stepId": 8,
+        "status": "ok",
+        "durationMs": 620,
+        "repairAttempts": 0
+      }
+    ],
+    "startedAt": 1760000041000,
+    "finishedAt": 1760000064500
+  },
+  "metrics": {
+    "timeToDemoSec": 94,
+    "manualBaselineSec": 1800,
+    "stepsPlanned": 8,
+    "stepsOk": 7,
+    "stepsRepaired": 1,
+    "stepsFailed": 0,
+    "planSuccessRate": 1,
+    "repairRecoveryRate": 1
+  },
+  "createdAt": 1760000000000
+}

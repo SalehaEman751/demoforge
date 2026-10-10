@@ -1,0 +1,10 @@
+{
+  "timeToDemoSec": 94,
+  "manualBaselineSec": 1800,
+  "stepsPlanned": 8,
+  "stepsOk": 7,
+  "stepsRepaired": 1,
+  "stepsFailed": 0,
+  "planSuccessRate": 1,
+  "repairRecoveryRate": 1
+}

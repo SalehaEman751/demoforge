@@ -1,0 +1,13 @@
+{
+  "title": "Taskly: sign up and add your first task",
+  "steps": [
+    { "id": 1, "action": "navigate", "url": "/signup", "caption": "Open the Taskly sign-up page" },
+    { "id": 2, "action": "fill", "target": { "role": "textbox", "name": "Email" }, "value": "demo@taskly.dev", "caption": "Enter an email address" },
+    { "id": 3, "action": "fill", "target": { "role": "textbox", "name": "Password" }, "value": "demo-password-123", "caption": "Choose a password" },
+    { "id": 4, "action": "click", "target": { "role": "button", "name": "Create account" }, "caption": "Create the account" },
+    { "id": 5, "action": "assert_text", "text": "Your tasks", "caption": "We land on the dashboard" },
+    { "id": 6, "action": "fill", "target": { "role": "textbox", "name": "New task" }, "value": "Record the demo video", "caption": "Type a new task" },
+    { "id": 7, "action": "click", "target": { "role": "button", "name": "Add task" }, "caption": "Add the task to the list" },
+    { "id": 8, "action": "assert_text", "text": "Record the demo video", "caption": "The new task appears in the list" }
+  ]
+}

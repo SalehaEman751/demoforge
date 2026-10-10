@@ -1,0 +1,8 @@
+{
+  "name": "Taskly",
+  "framework": "Next.js",
+  "routes": ["/", "/signup", "/dashboard"],
+  "readmeSummary": "Taskly is a minimal task manager. Visitors land on a marketing page, create an account on /signup, and then add and view tasks on /dashboard.",
+  "startCommand": "npm run dev -- -p 3100",
+  "port": 3100
+}

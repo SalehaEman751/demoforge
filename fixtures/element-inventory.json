@@ -1,0 +1,33 @@
+{
+  "pages": [
+    {
+      "url": "/",
+      "title": "Taskly - Get things done",
+      "elements": [
+        { "role": "heading", "name": "Taskly" },
+        { "role": "heading", "name": "Simple tasks for busy people" },
+        { "role": "link", "name": "Get started" },
+        { "role": "link", "name": "Sign up" }
+      ]
+    },
+    {
+      "url": "/signup",
+      "title": "Create your account - Taskly",
+      "elements": [
+        { "role": "heading", "name": "Create your account" },
+        { "role": "textbox", "name": "Email", "placeholder": "you@example.com" },
+        { "role": "textbox", "name": "Password", "placeholder": "At least 8 characters" },
+        { "role": "button", "name": "Create account" }
+      ]
+    },
+    {
+      "url": "/dashboard",
+      "title": "Dashboard - Taskly",
+      "elements": [
+        { "role": "heading", "name": "Your tasks" },
+        { "role": "textbox", "name": "New task", "placeholder": "What needs doing?" },
+        { "role": "button", "name": "Add task" }
+      ]
+    }
+  ]
+}

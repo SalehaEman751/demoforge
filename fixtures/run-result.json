@@ -1,0 +1,16 @@
+{
+  "videoPath": "out/job_demo01/demo.webm",
+  "logPath": "out/job_demo01/run.log",
+  "results": [
+    { "stepId": 1, "status": "ok", "durationMs": 1800, "repairAttempts": 0 },
+    { "stepId": 2, "status": "ok", "durationMs": 900, "repairAttempts": 0 },
+    { "stepId": 3, "status": "ok", "durationMs": 850, "repairAttempts": 0 },
+    { "stepId": 4, "status": "repaired", "error": "Timeout 5000ms waiting for role=button[name=\"Sign up\"]", "durationMs": 6200, "repairAttempts": 1 },
+    { "stepId": 5, "status": "ok", "durationMs": 700, "repairAttempts": 0 },
+    { "stepId": 6, "status": "ok", "durationMs": 880, "repairAttempts": 0 },
+    { "stepId": 7, "status": "ok", "durationMs": 640, "repairAttempts": 0 },
+    { "stepId": 8, "status": "ok", "durationMs": 620, "repairAttempts": 0 }
+  ],
+  "startedAt": 1760000041000,
+  "finishedAt": 1760000064500
+}
